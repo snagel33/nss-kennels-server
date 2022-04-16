@@ -3,43 +3,50 @@ CUSTOMERS = [
       "id": 1,
       "name": "Sydney Noh",
       "address": "966 Software School Rd.",
-      "email": "sydneynoh@mail.com"
+      "email": "sydneynoh@mail.com",
+      "status": "Active"
     },
     {
       "id": 2,
       "name": "Trevor Guinn",
       "address": "123 NSS Ln",
-      "email": "trevorguinn@mail.com"
+      "email": "trevorguinn@mail.com",
+      "status": "Active"
     },
     {
       "id": 3,
       "name": "Steven Nagel",
       "address": "345 Somewhere St",
-      "email": "stevennagel@mail.com"
+      "email": "stevennagel@mail.com",
+      "status": "Active"
     },
     {
       "id": 4,
       "name": "Ricky Bobby",
       "address": "678 IwantToGoFast Dr.",
-      "email": "rickybobby@mail.com"
+      "email": "rickybobby@mail.com",
+      "status": "Active"
     },
     {
       "name": "Customer 5",
       "address": "222 Place Dr",
       "id": 5,
-      "email": "customer5@mail.com"
+      "email": "customer5@mail.com",
+      "status": "Active"
     },
     {
       "name": "Customer 6",
       "address": "222 Road Pl",
       "id": 6,
-      "email": "customer6@mail.com"
+      "email": "customer6@mail.com",
+      "status": "Active"
     },
     {
       "email": "billybob@mail.com",
       "name": "Billy Bob",
       "id": 7,
-      "address": "888 Road Pl"
+      "address": "888 Road Pl",
+      "status": "Active"
     }
 ]
 
@@ -70,3 +77,9 @@ def delete_customer(id):
             
     if customer_index >= 0:
         CUSTOMERS.pop(customer_index)
+        
+def update_customer(id, new_customer):
+    for index, customer in enumerate(CUSTOMERS):
+        if customer["id"] == id:
+            CUSTOMERS[index] = new_customer
+            break
